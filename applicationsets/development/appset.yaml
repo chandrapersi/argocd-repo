@@ -15,7 +15,41 @@ spec:
     spec:
       project: default
       destination:
-        namespace: '{{metadata.argocd_namespace}}'
+        namespace: 'apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: development
+  namespace: argocd-worker
+spec:
+  generators:
+  - list:
+      elements:
+      - cluster: dev
+        url: http://localhost
+  template:
+    metadata:
+      name: 'dev-nginxapp'
+    spec:
+      project: default
+      destination:
+        namespace: 'argocd-worker'
+        server: https://kubernetes.default.svc
+      source:
+        path: apps
+        repoURL: https://github.com/cbagade/argocd-repo
+        targetRevision: code
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+        syncOptions:
+        - CreateNamespace=true
+        retry:
+          limit: 3
+          backoff:
+            duration: 2m
+            factor: 3
+            maxDuration: 8m'
         server: https://kubernetes.default.svc
       source:
         path: apps
