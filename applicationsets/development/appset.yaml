@@ -5,11 +5,10 @@ metadata:
   namespace: argocd-worker
 spec:
   generators:
-  - git:
-      files:
-      - path: configurations/development/**/cluster-config.yaml
-      repoURL: https://github.com/cbagade/argocd-repo
-      revision: configuration
+  - list:
+      elements:
+      - cluster: dev
+        url: http://localhost
   template:
     metadata:
       name: '{{cluster.name}}-nginxapp'
