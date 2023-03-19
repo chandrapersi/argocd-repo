@@ -1,21 +1,3 @@
-apiVersion: argoproj.io/v1alpha1
-kind: ApplicationSet
-metadata:
-  name: development
-  namespace: argocd-worker
-spec:
-  generators:
-  - list:
-      elements:
-      - cluster: dev
-        url: http://localhost
-  template:
-    metadata:
-      name: '{{cluster.name}}-nginxapp'
-    spec:
-      project: default
-      destination:
-        namespace: 'apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
   name: development
