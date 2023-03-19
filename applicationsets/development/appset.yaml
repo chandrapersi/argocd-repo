@@ -14,7 +14,7 @@ spec:
     metadata:
       name: '{{cluster.name}}-nginxapp'
     spec:
-      project: wo-argoproj-resources	
+      project: default
       destination:
         namespace: '{{metadata.argocd_namespace}}'
         server: https://kubernetes.default.svc
