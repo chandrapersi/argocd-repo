@@ -5,7 +5,11 @@ metadata:
   namespace: argocd-worker
 spec:
   generators:
-    - cluster: {}
+  - list:
+      elements:
+        - cluster: dev
+          url: https://kubernetes.default.svc
+          env: dev
   template:
     metadata:
       name: 'dev-nginxapp'
