@@ -7,4 +7,4 @@ metadata:
   project: default
   namespace: argocd-worker
   argocd_namespace: argocd-worker
-  nginx-app_namespace: nginx-app
+  nginx-app_namespace: argocd-worker
