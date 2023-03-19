@@ -7,12 +7,10 @@ spec:
   generators:
   - list:
       elements:
-        - cluster: dev
-          url: https://kubernetes.default.svc
-          env: dev
+        - namespace: argocd-worker
   template:
     metadata:
-      name: 'dev-nginxapp'
+      name: 'argocd-worker-nginxapp'
     spec:
       project: default
       destination:
@@ -20,7 +18,7 @@ spec:
         server: https://kubernetes.default.svc
       source:
         path: apps
-        repoURL: https://github.com/cbagade/argocd-repo
+        repoURL: https://github.com/cbagade/argocd-repo.git
         targetRevision: code
       syncPolicy:
         automated:
