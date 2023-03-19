@@ -5,10 +5,7 @@ metadata:
   namespace: argocd-worker
 spec:
   generators:
-  - list:
-      elements:
-      - cluster: dev
-        url: http://localhost
+    - cluster: {}
   template:
     metadata:
       name: 'dev-nginxapp'
