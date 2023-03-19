@@ -4,7 +4,7 @@ environment: dev
 cluster:
   url: https://kubernetes.default.svc
 metadata:
-  project: argocd-project
+  project: default
   namespace: default-namespace
   argocd_namespace: argocd-worker  
   nginx-app_namespace: nginx-app
