@@ -12,7 +12,7 @@ spec:
       revision: configuration
   template:
     metadata:
-      name: '{{cluster.name}}-{{path.basename}}'
+      name: '{{cluster.name}}-nginxapp'
     spec:
       project: wo-argoproj-resources	
       destination:
