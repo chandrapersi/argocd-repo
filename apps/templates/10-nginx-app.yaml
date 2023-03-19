@@ -1,0 +1,29 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nginx-app-{{.Values.environment}}
+  namespace: {{ .Values.metadata.argocd_namespace }}
+  annotations:
+    argocd.argoproj.io/sync-wave: "50"
+spec:
+  destination:
+    namespace: {{ .Values.metadata.nginx-app_namespace }}
+    server: {{ .Values.cluster.url }}
+  project: {{.Values.metadata.project}}
+  source:
+    path: resources/nginxapp
+    repoURL: {{ .Values.repoURL }}
+    targetRevision: {{ .Values.targetRevision }}
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+    retry:
+      limit: 3
+      backoff:
+        duration: 5s
+        factor: 2
+        maxDuration: 3m

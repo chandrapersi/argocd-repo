@@ -1,0 +1,10 @@
+repoURL: https://github.com/cbagade/argocd-repo
+targetRevision: code
+environment: dev
+cluster:
+  url: https://kubernetes.default.svc
+metadata:
+  project: argocd-project
+  namespace: default-namespace
+  argocd_namespace: argocd-worker  
+  nginx-app_namespace: nginx-app
