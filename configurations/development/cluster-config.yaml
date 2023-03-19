@@ -1,0 +1,5 @@
+cluster:
+  name: argocd-project
+  shortname: argocd-project
+metadata:
+  argocd_namespace: argocd-worker

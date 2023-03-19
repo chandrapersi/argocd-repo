@@ -1,0 +1,36 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: development
+  namespace: argocd-worker
+spec:
+  generators:
+  - git:
+      files:
+      - path: configurations/development/**/cluster-config.yaml
+      repoURL: https://github.com/cbagade/argocd-repo
+      revision: configuration
+  template:
+    metadata:
+      name: '{{cluster.name}}-{{path.basename}}'
+    spec:
+      project: wo-argoproj-resources	
+      destination:
+        namespace: '{{metadata.argocd_namespace}}'
+        server: https://kubernetes.default.svc
+      source:
+        path: apps
+        repoURL: https://github.com/cbagade/argocd-repo
+        targetRevision: code
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+        syncOptions:
+        - CreateNamespace=true
+        retry:
+          limit: 3
+          backoff:
+            duration: 2m
+            factor: 3
+            maxDuration: 8m
