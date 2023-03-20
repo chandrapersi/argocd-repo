@@ -18,7 +18,7 @@ spec:
         server: https://kubernetes.default.svc
       source:
         path: resources/nginxapp
-        repoURL: https://cbagade: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@github.com/cbagade/argocd-repo.git
+        repoURL: https://github.com/cbagade/argocd-repo.git
         targetRevision: app
       syncPolicy:
         automated:
