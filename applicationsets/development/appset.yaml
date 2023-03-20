@@ -14,7 +14,7 @@ spec:
     spec:
       project: default
       destination:
-        namespace: 'eks-sample-app'
+        namespace: 'argocd'
         server: https://kubernetes.default.svc
       source:
         path: apps
