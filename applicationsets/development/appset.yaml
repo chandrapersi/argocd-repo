@@ -7,14 +7,14 @@ spec:
   generators:
   - list:
       elements:
-        - namespace: argocd-worker
+        - namespace: argocd
   template:
     metadata:
-      name: 'argocd-worker-nginxapp'
+      name: 'argocd-nginxapp'
     spec:
       project: default
       destination:
-        namespace: 'argocd-worker'
+        namespace: 'argocd'
         server: https://kubernetes.default.svc
       source:
         path: apps
