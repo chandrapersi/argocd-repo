@@ -17,7 +17,7 @@ spec:
         namespace: 'argocd'
         server: https://kubernetes.default.svc
       source:
-        path: resources/nginxapp
+        path: apps
         repoURL: https://github.com/cbagade/argocd-repo.git
         targetRevision: code
       syncPolicy:
