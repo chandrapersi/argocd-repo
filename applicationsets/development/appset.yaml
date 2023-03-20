@@ -18,17 +18,5 @@ spec:
         server: https://kubernetes.default.svc
       source:
         path: apps
-        repoURL: https://github.com/cbagade/argocd-repo.git
+        repoURL: https://github.com/cbagade/argocd-repo
         targetRevision: code
-      syncPolicy:
-        automated:
-          prune: true
-          selfHeal: true
-        syncOptions:
-        - CreateNamespace=true
-        retry:
-          limit: 3
-          backoff:
-            duration: 2m
-            factor: 3
-            maxDuration: 8m'
