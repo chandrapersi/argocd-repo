@@ -10,7 +10,7 @@ spec:
         - namespace: argocd
   template:
     metadata:
-      name: 'argocd-nginxapp'
+      name: 'argocd-nginxapp-dev'
     spec:
       project: default
       destination:
