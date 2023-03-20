@@ -3,7 +3,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: argocd-nginxapp
-  namespace: {{ .Values.metadata.nginx_app_namespace }}
+  namespace: {{ .Values.metadata.argocd_namespace }}
   annotations:
     argocd.argoproj.io/sync-wave: "50"
 spec:
