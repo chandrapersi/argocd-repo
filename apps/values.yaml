@@ -7,4 +7,4 @@ metadata:
   project: default
   namespace: argocd
   argocd_namespace: argocd
-  nginx-app_namespace: eks-sample-app
+  nginx_app_namespace: eks-sample-app
