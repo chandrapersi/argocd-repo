@@ -1,2 +1,6 @@
+---
+nginx_app_service:
+  replicas: 2
+
 metadata:
   namespace: eks-sample-app
