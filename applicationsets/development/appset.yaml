@@ -2,24 +2,24 @@ apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
   name: development
-  namespace: argocd
+  namespace: argocd-worker
 spec:
   generators:
   - list:
       elements:
-        - namespace: argocd
+        - namespace: argocd-worker
   template:
     metadata:
       name: 'argocd-nginxapp-dev'
     spec:
       project: psl-argoproj-resources
       destination:
-        namespace: 'argocd'
+        namespace: argocd-worker
         server: https://kubernetes.default.svc
       source:
         path: apps
         repoURL: https://github.com/Rohita83/argocd-repo
-        targetRevision: 65654a7e98d5846cb78d88fc3a873b4dcb293fd4
+        targetRevision: code
       syncPolicy:
         automated:
           prune: true
