@@ -4,7 +4,7 @@ environment: dev
 cluster:
   url: https://kubernetes.default.svc
 metadata:
-  project: default
+  project: psl-argoproj-resources
   namespace: argocd
   argocd_namespace: argocd
   nginx_app_namespace: eks-sample-app
