@@ -1,5 +1,5 @@
 repoURL: https://github.com/Rohita83/argocd-repo
-targetRevision: test-code-branch
+targetRevision: code
 environment: dev
 cluster:
   url: https://kubernetes.default.svc
