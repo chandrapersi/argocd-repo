@@ -19,7 +19,7 @@ spec:
       source:
         path: apps
         repoURL: https://github.com/Rohita83/argocd-repo
-        targetRevision: c62e43bcfe19f5e0d31d140b03e330bc7697bd15
+        targetRevision: 6b7adc05acd1c480b10d3b045c89478dbc5ba390
       syncPolicy:
         automated:
           prune: true
