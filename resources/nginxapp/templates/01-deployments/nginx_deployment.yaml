@@ -6,7 +6,7 @@ metadata:
   labels:
     app: eks-sample-linux-app
 spec:
-  replicas: {{ .Values.nginx_app_service.replicas }}
+  replicas: 1
   selector:
     matchLabels:
       app: eks-sample-linux-app
