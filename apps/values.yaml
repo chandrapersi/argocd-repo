@@ -5,5 +5,5 @@ cluster:
   url: https://kubernetes.default.svc
 metadata:
   project: psl-argoproj-resources
-  argocd_namespace: psl-appset
+  argocd_namespace: argocd
   nginx_app_namespace: eks-sample-app
