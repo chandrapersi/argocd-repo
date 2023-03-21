@@ -12,7 +12,7 @@ spec:
     metadata:
       name: 'argocd-nginxapp-dev'
     spec:
-      project: default
+      project: psl-argoproj-resources
       destination:
         namespace: 'argocd'
         server: https://kubernetes.default.svc
