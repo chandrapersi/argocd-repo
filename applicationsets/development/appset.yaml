@@ -20,3 +20,15 @@ spec:
         path: apps
         repoURL: https://github.com/Rohita83/argocd-repo
         targetRevision: code
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+        syncOptions:
+        - CreateNamespace=true
+        retry:
+          limit: 3
+          backoff:
+            duration: 2m
+            factor: 3
+            maxDuration: 8m
