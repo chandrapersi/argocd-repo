@@ -2,19 +2,19 @@ apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
   name: development
-  namespace: psl-appset
+  namespace: argocd
 spec:
   generators:
   - list:
       elements:
-        - namespace: psl-appset
+        - namespace: argocd
   template:
     metadata:
       name: 'argocd-nginxapp-dev'
     spec:
       project: psl-argoproj-resources
       destination:
-        namespace: psl-appset
+        namespace: argocd
         server: https://kubernetes.default.svc
       source:
         path: apps
