@@ -18,5 +18,5 @@ spec:
         server: https://kubernetes.default.svc
       source:
         path: apps
-        repoURL: https://github.com/cbagade/argocd-repo
+        repoURL: https://github.com/Rohita83/argocd-repo
         targetRevision: code
