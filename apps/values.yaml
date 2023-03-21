@@ -1,4 +1,4 @@
-# repoURL: https://github.com/Rohita83/argocd-repo
+repoURL: https://github.com/Rohita83/argocd-repo
 # targetRevision: test-code-branch
 environment: dev
 cluster:
