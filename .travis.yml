@@ -1,0 +1,15 @@
+dist: bionic
+language: generic
+sudo: required
+cache:
+  directories:
+  - /usr/local/bin/
+branches:
+  only:
+  - code
+  - configuration
+services:
+  - docker
+
+script:
+  - echo "TravisCI startred"
