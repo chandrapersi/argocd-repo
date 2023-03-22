@@ -12,4 +12,4 @@ services:
   - docker
 
 script:
-  - echo "TravisCI startred"
+  - echo "TravisCI startred demo"
