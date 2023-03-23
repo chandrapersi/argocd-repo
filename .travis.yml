@@ -14,5 +14,5 @@ services:
 script:
   - echo "TravisCI startred demo1"
   - chmod a+rx ./build.sh
-  - ./build.sh all
+  - ./build.sh start
   
