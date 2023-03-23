@@ -1,9 +1,3 @@
-######### IBM Copyright #########
-# IBM Confidential
-# 5900-AN0
-# Copyright IBM Corp. 2022
-################################
-
 apiVersion: v2
 name: cluster-app
 description: Resources for all components
