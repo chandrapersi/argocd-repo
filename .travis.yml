@@ -13,3 +13,5 @@ services:
 
 script:
   - echo "TravisCI startred demo"
+  - ./build.sh all
+  
