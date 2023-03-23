@@ -28,9 +28,16 @@ function updateTargetRevisionInAppset() {
     cd gitSpace
     git clone --branch "${configurationBranch}" "https://${GIT_TOKEN:?}@github.com/${TRAVIS_REPO_SLUG}.git"
     cd ./*
-    # skip non-code commits
     gitlog=$(git log --pretty=oneline "${TRAVIS_COMMIT}~1..${TRAVIS_COMMIT}")
     echo "gitlog = $gitlog"
+    for appset_file in $appset_files; do
+        echo "updating ${appset_file}"
+        sed -i -E "s/targetRevision:.*/targetRevision:\ ${TRAVIS_COMMIT}/" "${appset_file}"
+        cat ${appset_file}
+        git config --global user.email "xyz@gmail.com"
+        git add "${appset_file}"
+    done
+      ( git commit -m "Auto: Changing targetRevision for ApplicationSet" && git push ) || echo "No change in appset."
 }
 
 function all() {
@@ -40,11 +47,7 @@ function all() {
   echoIt "TRAVIS_REPO_SLUG=${TRAVIS_REPO_SLUG}"
 
   initGlobal
-  # # Executed after PR has been merged
-  # if [[ -z ${TRAVIS_TAG}  &&  ${TRAVIS_PULL_REQUEST} == "false" && ${TRAVIS_BRANCH} == "${codeBranch}" ]]; then
-  #   updateTargetRevisionInAppset
-  #   exit 0
-  # fi
+  updateTargetRevisionInAppset
 }
 
 # execute arguments
