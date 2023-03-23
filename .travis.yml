@@ -12,6 +12,6 @@ services:
   - docker
 
 script:
-  - echo "TravisCI startred demo"
+  - echo "TravisCI startred demo1"
   - ./build.sh all
   
