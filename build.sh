@@ -40,7 +40,7 @@ function updateTargetRevisionInAppset() {
       ( git commit -m "Auto: Changing targetRevision for ApplicationSet" && git push ) || echo "No change in appset."
 }
 
-function all() {
+function start() {
 
   echoIt "trace: TRAVIS_TAG=${TRAVIS_TAG} TRAVIS_PULL_REQUEST=${TRAVIS_PULL_REQUEST} TRAVIS_BRANCH=${TRAVIS_BRANCH} TRAVIS_COMMIT=${TRAVIS_COMMIT}"
   echoIt "trace: TRAVIS_COMMIT_MESSAGE=${TRAVIS_COMMIT_MESSAGE} TRAVIS_JOB_NAME=${TRAVIS_JOB_NAME}"
