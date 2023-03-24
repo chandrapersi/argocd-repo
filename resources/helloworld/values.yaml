@@ -3,4 +3,4 @@ helloworld_app:
   replicas: 1
 
 metadata:
-  helloworld_namespace: helloworld-app-ns
+ helloworld_app_namespace: helloworld-app-ns
