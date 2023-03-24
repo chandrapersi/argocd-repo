@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: hello-world-deployment
-  namespace: {{ .Values.metadata.helloworld_namespace }}
+  namespace: {{ .Values.metadata.helloworld_app_namespace }}
   labels:
     app: hello-world
 spec:
