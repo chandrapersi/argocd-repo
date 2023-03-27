@@ -6,7 +6,7 @@ metadata:
   helloworld_app_namespace: helloworld-app-ns
 
 helloworld_app:
-  replicas: 1
+  replicas: 2
   resources:
     limits:
       cpu: '500m'

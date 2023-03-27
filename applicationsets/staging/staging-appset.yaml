@@ -10,9 +10,9 @@ spec:
         - namespace: argocd
   - git:
       files:
-      - path: configurations/development/cluster-config.yaml
+      - path: configurations/staging/cluster-config.yaml
       repoURL: https://github.com/Rohita83/argocd-repo
-      revision: configuration     
+      revision: configuration        
   template:
     metadata:
       name: 'argocd-nginxapp-dev'
