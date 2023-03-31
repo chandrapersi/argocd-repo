@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: hello-world
-        image: bhargavshah86/kube-test:v0.1
+        image: hello-world
         ports:
         - containerPort: 80
           resources:
