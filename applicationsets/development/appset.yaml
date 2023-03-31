@@ -32,7 +32,7 @@ spec:
               --set helloworld_app.resources.requests.memory={{helloworld_app.resources.requests.memory}}
               --set helloworld_app.resources.requests.cpu={{helloworld_app.resources.requests.cpu}}
               --set helloworld_app.resources.limits.memory={{helloworld_app.resources.limits.memory}}
-              --sethelloworld_app.resources.limits.cpu={{helloworld_app.resources.limits.cpu}}
+              --set helloworld_app.resources.limits.cpu={{helloworld_app.resources.limits.cpu}}
           name: argocd-vault-plugin-helm-custom
         repoURL: https://github.com/Rohita83/argocd-repo
         targetRevision: code
