@@ -15,6 +15,7 @@ spec:
     path: resources/nginxapp
     repoURL: {{ .Values.repoURL }}
     targetRevision: {{ .Values.targetRevision }}
+    plugin: {}
   syncPolicy:
     automated:
       prune: true
