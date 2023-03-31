@@ -1,6 +1,8 @@
 repoURL: https://github.com/Rohita83/argocd-repo
 targetRevision: code
 environment: dev
+argocd_vault_plugin:
+  name: argocd-vault-plugin-helm-custom
 cluster:
   url: https://kubernetes.default.svc
 metadata:
