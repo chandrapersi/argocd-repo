@@ -15,7 +15,6 @@ spec:
     path: resources/helloworld
     repoURL: {{ .Values.repoURL }}
     targetRevision: {{ .Values.targetRevision }}
-    plugin: {}
   syncPolicy:
     automated:
       prune: true
