@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: hello-world
-        image: hello-world
+        image: signalsciences/example-helloworld:latest
         ports:
         - containerPort: 80
           resources:
