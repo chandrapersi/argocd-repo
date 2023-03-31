@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: hello-world
-        image: signalsciences/example-helloworld:latest
+        image: public.ecr.aws/nginx/nginx:1.21
         ports:
         - containerPort: 80
           resources:
