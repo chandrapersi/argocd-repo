@@ -6,7 +6,7 @@ spec:
   generators:
   - git:
       files:
-      - path: configurations/development/**/cluster-config.yaml
+      - path: configurations/development/cluster-config.yaml
       repoURL: https://github.com/chandrapersi/argocd-repo
       revision: configuration
   template:
