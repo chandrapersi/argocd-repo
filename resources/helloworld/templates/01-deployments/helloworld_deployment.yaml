@@ -14,7 +14,6 @@ spec:
     metadata:
       labels:
         app: helloworld
-        clusterLabel: {{ .Values.helloworld_app.label_from_cluster }}
         appLabel: {{ .Values.helloworld_app.label_from_app }}
     spec:
       containers:
