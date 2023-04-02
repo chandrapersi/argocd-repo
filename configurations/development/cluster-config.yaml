@@ -1,6 +1,7 @@
 cluster:
   name: argocd-project
   shortname: argocd-project
+  dev_project_name: argocd-dev-apps
 metadata:
   argocd_namespace: argocd
   helloworld_app_namespace: helloworld-app-ns
