@@ -5,6 +5,7 @@ metadata:
   namespace: {{ .Values.metadata.helloworld_app_namespace }}
   labels:
     app: helloworld
+    clusterLabel: {{ .Values.helloworld_app.label_from_cluster }}
 spec:
   selector:
     matchLabels:
