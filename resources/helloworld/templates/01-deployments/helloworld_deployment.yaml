@@ -4,22 +4,22 @@ metadata:
   name: hello-world-deployment
   namespace: {{ .Values.metadata.helloworld_app_namespace }}
   labels:
-    app: hello-world
+    app: helloworld
 spec:
   selector:
     matchLabels:
-      app: hello-world
+      app: helloworld
   replicas: {{ .Values.helloworld_app.replicas }}
   template:
     metadata:
       labels:
-        app: hello-world
+        app: helloworld
     spec:
       containers:
-      - name: hello-world
-        image: public.ecr.aws/nginx/nginx:1.21
+      - name: helloworld
+        image: signalsciences/example-helloworld:latest
         ports:
-        - containerPort: 80
+        - containerPort: 8000
           resources:
             limits:
               cpu: '{{.Values.helloworld_app.resources.limits.cpu}}'
