@@ -6,15 +6,11 @@ spec:
   generators:
   - list:
       elements:
-        - namespace: argocd
-  - git:
-      files:
-      - path: configurations/development/cluster-config.yaml
-      repoURL: https://github.com/chandrapersi/argocd-repo
-      revision: configuration     
+      - cluster: engineering-dev
+        url: https://1.2.3.4
   template:
     metadata:
-      name: 'argocd-nginxapp'
+      name: '{{cluster}}-argocd-nginxapp'
     spec:
       project: psl-argoproj-resources
       destination:
