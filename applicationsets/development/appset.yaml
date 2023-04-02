@@ -4,10 +4,11 @@ metadata:
   name: development
 spec:
   generators:
-  - list:
-      elements:
-      - cluster: engineering-dev
-        url: https://1.2.3.4
+  - git:
+      files:
+      - path: configurations/development/**/cluster-config.yaml
+      repoURL: https://github.com/chandrapersi/argocd-repo
+      revision: configuration
   template:
     metadata:
       name: '{{cluster}}-argocd-nginxapp'
