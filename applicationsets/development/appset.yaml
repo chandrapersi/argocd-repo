@@ -11,7 +11,7 @@ spec:
   - git:
       files:
       - path: configurations/development/cluster-config.yaml
-      repoURL: https://github.com/Rohita83/argocd-repo
+      repoURL: https://github.com/chandrapersi/argocd-repo
       revision: configuration     
   template:
     metadata:
