@@ -20,7 +20,6 @@ spec:
       - name: HELM_ARGS
         value: >-
           --set helloworld_app.label_from_app={{.Values.helloworld_app.label_from_app}}
-          --set helloworld_app.label_from_cluster ={{.Values.helloworld_app.label_from_cluster }}
     path: resources/helloworld
     repoURL: {{ .Values.repoURL }}
     targetRevision: {{ .Values.targetRevision }}
