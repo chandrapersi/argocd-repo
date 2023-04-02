@@ -4,7 +4,7 @@ metadata:
   name: hello-world-deployment
   namespace: {{ .Values.metadata.helloworld_app_namespace }}
   labels:
-    app: {{ .Values.helloworld_app.label_from_cluster }}
+    app: helloworld
     clusterLabel: {{ .Values.helloworld_app.label_from_cluster }}
 spec:
   selector:
