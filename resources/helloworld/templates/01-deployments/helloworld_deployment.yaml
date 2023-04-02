@@ -17,9 +17,9 @@ spec:
     spec:
       containers:
       - name: helloworld
-        image: signalsciences/example-helloworld:latest
+        image: dockercloud/hello-world
         ports:
-        - containerPort: 8000
+        - containerPort: 80
           resources:
             limits:
               cpu: '{{.Values.helloworld_app.resources.limits.cpu}}'
