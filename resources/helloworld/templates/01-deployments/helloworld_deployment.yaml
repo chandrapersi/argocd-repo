@@ -20,4 +20,10 @@ spec:
         image: dockercloud/hello-world
         ports:
         - containerPort: 80
-    
+          resources:
+            limits:
+              cpu: '{{.Values.helloworld_app.resources.limits.cpu}}'
+              memory: '{{.Values.helloworld_app.resources.limits.memory}}'
+            requests:
+              cpu: '{{.Values.helloworld_app.resources.requests.cpu}}'
+              memory: '{{.Values.helloworld_app.resources.requests.memory}}'    
