@@ -11,7 +11,7 @@ spec:
       revision: configuration
   template:
     metadata:
-      name: 'argocd-nginxapp-dev'
+      name: {{cluster.dev_project_name}}
     spec:
       project: psl-argoproj-resources
       destination:
