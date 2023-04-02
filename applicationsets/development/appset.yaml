@@ -11,7 +11,7 @@ spec:
       revision: configuration
   template:
     metadata:
-      name: {{cluster.dev_project_name}}
+      name: '{{cluster.dev_project_name}}'
     spec:
       project: psl-argoproj-resources
       destination:
