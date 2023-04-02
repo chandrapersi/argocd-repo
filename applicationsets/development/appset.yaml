@@ -23,18 +23,7 @@ spec:
         server: https://kubernetes.default.svc
       source:
         path: apps
-        plugin:
-          env:
-          - name: HELM_VALUES
-            value: --values values.yaml
-          - name: HELM_ARGS
-            value: >-
-              --set helloworld_app.resources.requests.memory=128Mi
-              --set helloworld_app.resources.requests.cpu=100m
-              --set helloworld_app.resources.limits.memory=256Mi
-              --set helloworld_app.resources.limits.cpu=500m
-          name: argocd-vault-plugin-helm-custom
-        repoURL: https://github.com/Rohita83/argocd-repo
+        repoURL: https://github.com/chandrapersi/argocd-repo
         targetRevision: code
       syncPolicy:
         automated:
