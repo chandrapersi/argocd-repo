@@ -13,8 +13,6 @@ spec:
       repoURL: https://github.com/chandrapersi/argocd-repo
       revision: configuration     
   template:
-    metadata:
-      name: 'argocd-nginxapp'
     spec:
       project: psl-argoproj-resources
       destination:
