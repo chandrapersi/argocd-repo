@@ -10,3 +10,5 @@ metadata:
   argocd_namespace: argocd
   nginx_app_namespace: eks-sample-app
   helloworld_app_namespace: helloworld-app-ns
+helloworld_app:
+  label_from_app: applabel
